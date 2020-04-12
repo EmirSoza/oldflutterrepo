@@ -34,7 +34,7 @@ class MyRaisedButton extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 26,
                   color: Colors.white,
                   fontWeight: FontWeight.w200,
                   shadows: [
