@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                           onPressed: () {
                             Provider.of<Language>(context, listen: false)
                                 .setLanguage(0);
-                            Navigator.pushNamed(context, '/guide');
+                            Navigator.popAndPushNamed(context, '/guide');
                           },
                           icon: CircleAvatar(
                             radius: 60,
@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                           onPressed: () {
                             Provider.of<Language>(context, listen: false)
                                 .setLanguage(2);
-                            Navigator.pushNamed(context, '/guide');
+                            Navigator.popAndPushNamed(context, '/guide');
                           },
                           icon: CircleAvatar(
                             radius: 60,
@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                           onPressed: () {
                             Provider.of<Language>(context, listen: false)
                                 .setLanguage(1);
-                            Navigator.pushNamed(context, '/guide');
+                            Navigator.popAndPushNamed(context, '/guide');
                           },
                           icon: CircleAvatar(
                             radius: 60,

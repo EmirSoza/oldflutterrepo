@@ -13,7 +13,13 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => Language(),
       child: MaterialApp(
-        theme: ThemeData(fontFamily: 'Roboto'),
+        theme: ThemeData(
+          fontFamily: 'Gotham',
+          pageTransitionsTheme: PageTransitionsTheme(builders: {
+            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+            TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+          }),
+        ),
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {

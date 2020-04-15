@@ -23,7 +23,7 @@ class UtstillingSelection extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.7,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff4EC7E5), Colors.white],
+                      colors: [Color(0xff4ec3e0), Colors.white],
                       begin: Alignment.bottomLeft,
                       end: Alignment.topRight,
                     ),
@@ -40,6 +40,11 @@ class UtstillingSelection extends StatelessWidget {
                           title:
                               '${Provider.of<Language>(context).civilText(true)}',
                           navigator: () {
+                            Provider.of<Language>(context, listen: false)
+                                .setSide(true);
+                            Provider.of<Language>(context, listen: false)
+                                .resetIndex();
+
                             Navigator.pushNamed(context, '/guide1');
                           },
                         ),
@@ -47,6 +52,10 @@ class UtstillingSelection extends StatelessWidget {
                           title:
                               '${Provider.of<Language>(context).civilText(false)}',
                           navigator: () {
+                            Provider.of<Language>(context, listen: false)
+                                .setSide(false);
+                            Provider.of<Language>(context, listen: false)
+                                .resetIndex();
                             Navigator.pushNamed(context, '/guide1');
                           },
                         ),
@@ -62,8 +71,8 @@ class UtstillingSelection extends StatelessWidget {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xff8360c3),
-                        Color(0xff91eae4),
+                        Color(0xff34657f),
+                        Color(0xff4ec3e0),
                       ],
                       begin: Alignment.bottomLeft,
                       end: Alignment.topRight,
@@ -75,7 +84,7 @@ class UtstillingSelection extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(top: 25),
+                        padding: EdgeInsets.only(top: 30),
                         child: Image.asset(
                           'assets/images/nlm_logo.png',
                           height: 85,

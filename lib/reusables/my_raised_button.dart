@@ -24,7 +24,10 @@ class MyRaisedButton extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30.0),
             gradient: LinearGradient(
-              colors: [Color(0xff8360c3), Color(0xff64B6FF)],
+              colors: [
+                Color(0xff253746),
+                Color(0xff4ec3e0),
+              ],
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
             ),
@@ -34,16 +37,17 @@ class MyRaisedButton extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                  fontSize: 26,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w200,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black,
-                      offset: Offset(2, 2),
-                      blurRadius: 3,
-                    )
-                  ]),
+                fontSize: 25,
+                color: Color(0xff101820),
+                fontWeight: FontWeight.w600,
+//                  shadows: [
+//                    Shadow(
+//                      color: Colors.black,
+//                      offset: Offset(1, 1),
+//                      blurRadius: 3,
+//                    )
+//                  ]
+              ),
             ),
           ),
         ),
